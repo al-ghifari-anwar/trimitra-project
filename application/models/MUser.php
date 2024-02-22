@@ -59,6 +59,7 @@ class MUser extends CI_Model
 
     public function create()
     {
+        $this->load->model('MAuthToken');
         $post = $this->input->post();
         $this->username = $post['username'];
         $this->full_name = $post['full_name'];
